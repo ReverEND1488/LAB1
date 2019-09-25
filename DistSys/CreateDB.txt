@@ -1,0 +1,40 @@
+.open tdisciple.db
+
+CREATE TABLE diciplines (
+d_id INTEGER PRIMARY KEY AUTOINCREMENT,
+d_name VARCHAR (20),
+d_subarea VARCHAR (20)
+);
+
+CREATE TABLE teachers (
+t_id INTEGER,
+t_name VARCHAR (20),
+d_name VARCHAR (20)
+);
+
+.mode column
+
+INSERT INTO diciplines (d_name, d_subarea)
+VALUES ('Java', 'IT');
+INSERT INTO diciplines (d_name, d_subarea)
+VALUES ('Android', 'IT');
+INSERT INTO diciplines (d_name, d_subarea)
+VALUES ('PT', 'PhysicalEx');
+INSERT INTO diciplines (d_name, d_subarea)
+VALUES ('Math', 'Algebra');
+INSERT INTO diciplines (d_name, d_subarea)
+VALUES ('DataBases', 'Algebra');
+
+INSERT INTO teachers
+VALUES ('1', 'Labartkava S.V.', 'Java');
+INSERT INTO teachers
+VALUES ('1', 'Labartkava S.V.', 'Android');
+INSERT INTO teachers
+VALUES ('2', 'Shuherov D.V.', 'PT');
+INSERT INTO teachers
+VALUES ('3', 'Otstalov A.S.', 'Math');
+INSERT INTO teachers
+VALUES ('3', 'Otstalov A.S.', 'DataBases');
+
+SELECT * FROM teachers;
+SELECT * FROM diciplines;
